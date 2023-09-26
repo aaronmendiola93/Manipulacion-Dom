@@ -45,9 +45,8 @@ createUser(user);
 
 // Eventos
 
-/*const inputName = document.getElementById('name');
+const inputName = document.getElementById('name');
 const userName = document.getElementById('username');
-*/
 /*
 inputName.addEventListener('input', e => {
     console.log(e.target.value);
@@ -131,3 +130,25 @@ users.forEach(user=> {
 // 2. Obtener la info del usuario desde inputs y mostrar en tarjetas
 // Al menos deben tener 2 commits
 
+const nameInput = document.getElementById('name');
+const ageInput = document.getElementById('userAge');
+const emailInput = document.getElementById('email');
+
+const usernameDisplay = document.getElementById('username');
+const ageDisplay = document.getElementById('age');
+const emailDisplay = document.getElementById('mail');
+
+const updateProfileButton = document.getElementById('ProfileBtn');
+
+
+updateProfileButton.addEventListener('click', () => {
+   
+    const newName = nameInput.value;
+    const newAge = ageInput.value;
+    const newEmail = emailInput.value;
+
+   
+    usernameDisplay.textContent = `Nombre: ${newName}`;
+    ageDisplay.textContent = `Edad: ${newAge}`;
+    emailDisplay.textContent = `Correo: ${newEmail}`;
+});
